@@ -13,21 +13,22 @@ body {
   justify-content: center;
   text-align: center;
   animation: breathe 12s ease-in-out infinite;
-  padding: 2rem 1.5rem;
+  padding: 4rem 1.5rem 2rem;
   position: relative;
 }
 
 .container {
   max-width: 650px;
   width: 100%;
-  margin-bottom: 2em;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
 }
 
 .container h1 {
   font-size: 3.2rem;
   letter-spacing: 0.04em;
   font-weight: 400;
-  margin-bottom: 1.2em;
+  margin-bottom: 1.5em;
 }
 
 .line {
