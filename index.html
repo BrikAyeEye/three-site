@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three — A Meditation App That Refuses to Gamify Peace</title>
+  <meta name="description" content="A paid minimalist meditation app with no voices, no tracking, no guidance — just silence.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="fade">Three</h1>
+    <p class="tagline fade delay1">A meditation app that refuses to gamify peace.</p>
+    <p class="desc fade delay2">No voices. No tracking. Just silence.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.example.minizen" class="button fade delay3">Get it on Google Play</a>
+
+    <div class="why fade delay4" id="why">
+      <p class="why-text">
+        Why: Because it's easier to come back after time off when there are no stats, no streaks, no options to choose.
+        Just one screen, one tap, and quiet. No bazaar of choices — only the habit of returning.
+      </p>
+    </div>
+  </div>
+
+  <footer class="fade delay5">
+    <p>Made quietly by <a href="https://github.com/YOURUSERNAME" target="_blank">Benjamin Karcher</a></p>
+  </footer>
+
+  <script>
+    // Click anywhere to reveal 'why'
+    document.body.addEventListener('click', () => {
+      const why = document.getElementById('why');
+      why.style.opacity = '1';
+      why.style.transform = 'translateY(0)';
+    });
+  </script>
+</body>
+</html>
+
