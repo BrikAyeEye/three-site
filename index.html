@@ -3,20 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Three — A Meditation App That Refuses to Gamify Peace</title>
-  <meta name="description" content="A paid minimalist meditation app with no voices, no tracking, no guidance — just silence.">
+  <title>Three — No voices. No tracking. Adjusts to your practice.</title>
+  <meta name="description" content="A minimalist meditation app that refuses to gamify peace. No voices. No tracking. Adjusts to your practice.">
   <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="Three — A meditation app that refuses to gamify peace">
+  <meta property="og:description" content="No voices. No tracking. Adjusts to your practice.">
+  <meta property="og:image" content="https://brikaeyeeye.github.io/three-site/preview.jpg">
+  <meta name="theme-color" content="#000000">
 </head>
+
 <body>
   <div class="container">
     <h1 class="fade delay0">Three</h1>
-    <p class="line fade delay1">A meditation app that refuses to gamify peace.</p>
-    <p class="line fade delay2">No voices. No tracking. Just silence.</p>
-    <a href="https://play.google.com/store/apps/details?id=com.example.minizen" class="button fade delay3">Get it on Google Play</a>
+    <p class="line fade delay1">No voices.</p>
+    <p class="line fade delay2">No tracking.</p>
+    <p class="line fade delay3">Adjusts to your practice.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.example.minizen" class="button fade delay4">Get it on Google Play</a>
   </div>
 
   <footer class="fade delay5">
     <p>Made quietly by <a href="https://github.com/BrikAyeEye" target="_blank">Benjamin Karcher</a></p>
   </footer>
+
+  <div class="why" id="why">
+    <p>
+      It's easier to return after time away when nothing judges you.
+      No stats, no streaks, no dashboards — only the habit of coming back.
+    </p>
+  </div>
+
+  <script>
+    // Reveal "why" text on click
+    document.body.addEventListener('click', () => {
+      const why = document.getElementById('why');
+      why.style.opacity = '1';
+      why.style.transform = 'translateY(0)';
+    });
+  </script>
 </body>
 </html>
