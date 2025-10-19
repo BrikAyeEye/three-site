@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Zen - Visual States Preview</title>
+    <style>
+        body {
+            background-color: #0D0D0D;
+            color: #F5D58A;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        .subtitle {
+            font-size: 0.9em;
+            opacity: 0.6;
+            margin-bottom: 40px;
+        }
+        .container {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .label {
+            font-size: 1.1em;
+            font-weight: 400;
+        }
+        .sublabel {
+            font-size: 0.85em;
+            opacity: 0.5;
+            margin-top: -15px;
+        }
+        .circle-container {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        .specs {
+            margin-top: 60px;
+            padding: 30px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            max-width: 800px;
+        }
+        .spec-row {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+            padding: 10px;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .spec-label {
+            font-weight: 600;
+            min-width: 100px;
+        }
+        .spec-value {
+            opacity: 0.8;
+        }
+        
+        /* Pulsing animation for screen 0 */
+        @keyframes pulse {
+            0%, 100% { 
+                opacity: 0.35;
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.55;
+                transform: scale(1.25);
+            }
+        }
+        .pulse {
+            animation: pulse 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mini Zen Visual States</h1>
+    <div class="subtitle">All circles shown at actual size (150dp × 150dp)</div>
+    
+    <div class="container">
+        <!-- Screen 0: Pulsing Ring -->
+        <div class="state">
+            <div class="label">Screen 0</div>
+            <div class="sublabel">Invitation Ring</div>
+            <div class="circle-container">
+                <svg class="pulse">
+                    <circle cx="75" cy="75" r="73" 
+                            fill="none" 
+                            stroke="#F5D58A" 
+                            stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Stroke:</div>
+                    <div class="spec-value">2dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Fill:</div>
+                    <div class="spec-value">None (transparent)</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">35% → 55% (pulsing)</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Scale:</div>
+                    <div class="spec-value">1.0 → 1.25 (breathing)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 1 & 2: Filled Circle -->
+        <div class="state">
+            <div class="label">Screens 1 & 2</div>
+            <div class="sublabel">Embodiment</div>
+            <div class="circle-container">
+                <svg>
+                    <circle cx="75" cy="75" r="75" 
+                            fill="#F5D58A" 
+                            stroke="none"/>
+                </svg>
+            </div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Stroke:</div>
+                    <div class="spec-value">None</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Fill:</div>
+                    <div class="spec-value">Solid #F5D58A</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">100% (static)</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Scale:</div>
+                    <div class="spec-value">1.0 (fixed)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 3: Circle + Halo -->
+        <div class="state">
+            <div class="label">Screen 3</div>
+            <div class="sublabel">Resonance (Halo)</div>
+            <div class="circle-container">
+                <svg>
+                    <!-- Outer halo ring (faint) -->
+                    <circle cx="75" cy="75" r="74.5" 
+                            fill="none" 
+                            stroke="#F5D58A" 
+                            stroke-width="1"
+                            opacity="0.12"/>
+                    <!-- Inner filled circle (5dp inset = ~5px) -->
+                    <circle cx="75" cy="75" r="70" 
+                            fill="#F5D58A" 
+                            stroke="none"/>
+                </svg>
+            </div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Outer ring:</div>
+                    <div class="spec-value">1dp (12% opacity)</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Gap:</div>
+                    <div class="spec-value">5dp inset</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Inner fill:</div>
+                    <div class="spec-value">Solid #F5D58A (140dp)</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">100% (static)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="specs" style="margin-top: 60px;">
+        <h3 style="margin-top: 0;">Common Properties</h3>
+        <div class="spec-row">
+            <div class="spec-label">View size:</div>
+            <div class="spec-value">150dp × 150dp (all screens)</div>
+        </div>
+        <div class="spec-row">
+            <div class="spec-label">Color:</div>
+            <div class="spec-value">#F5D58A (warm cream)</div>
+        </div>
+        <div class="spec-row">
+            <div class="spec-label">Background:</div>
+            <div class="spec-value">#0D0D0D (zen black)</div>
+        </div>
+        <div class="spec-row">
+            <div class="spec-label">Position:</div>
+            <div class="spec-value">Center of screen</div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; opacity: 0.6; font-size: 0.9em;">
+        Note: Screen 0 animates (pulsing + breathing scale). Screens 1, 2, 3 are static.
+    </div>
+</body>
+</html>
+
