@@ -33,26 +33,34 @@
     </a>
   </div>
 
+  <div class="question-mark fade delay5" id="questionMark">?</div>
+
+  <div class="why hidden" id="why">
+    <p>
+      It's easier to return after time away when nothing judges you.
+      No stats, no streaks, no dashboards — only the habit of coming back.
+    </p>
+  </div>
+
   <footer class="fade delay5">
     <p>Made quietly by <a href="https://github.com/BrikAyeEye" target="_blank">Benjamin Karcher</a></p>
   </footer>
-
-  <div class="why" id="why">
-    <p>
-      No stats, no streaks, no dashboards — only the habit of coming back.<br>
-      Consistency creates time.
-    </p>
-  </div>
 
   <script>
     // Fade body in after all assets are loaded
     window.addEventListener('load', () => document.body.style.opacity = '1');
 
-    // Reveal "why" text on click
-    document.body.addEventListener('click', () => {
-      const why = document.getElementById('why');
-      why.style.opacity = '1';
-      why.style.transform = 'translateY(0)';
+    // Reveal "why" text on question mark click
+    const questionMark = document.getElementById('questionMark');
+    const why = document.getElementById('why');
+    
+    questionMark.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (why.classList.contains('hidden')) {
+        why.classList.remove('hidden');
+        why.classList.add('visible');
+        questionMark.style.opacity = '0';
+      }
     });
   </script>
 </body>

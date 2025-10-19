@@ -51,19 +51,47 @@ body {
   filter: brightness(1) sepia(1) saturate(0.8) hue-rotate(20deg);
 }
 
+.question-mark {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #c6a24a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #d4b464;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 1.5em auto;
+  font-weight: 300;
+}
+.question-mark:hover {
+  border-color: #d4b464;
+  background-color: #111;
+  transform: scale(1.1);
+}
+
 .why {
-  position: absolute;
-  bottom: 6em;
   max-width: 600px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 3s ease, transform 3s ease;
+  margin: 1.5em auto 2em;
   font-size: 0.9rem;
   font-weight: 300;
   line-height: 1.6;
   color: #bfa24c;
-  text-align: center;
-  padding: 0 1.5rem;
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.why.hidden {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+.why.visible {
+  opacity: 1;
+  height: auto;
 }
 
 footer {
