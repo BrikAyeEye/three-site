@@ -4,55 +4,54 @@
 
 body {
   background-color: #000;
-  color: #d4b464; /* warm brass tone */
+  color: #d4b464;
   font-family: 'Inter', sans-serif;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
   animation: breathe 12s ease-in-out infinite;
-  padding: 4rem 1.5rem 2rem;
-  position: relative;
-}
-
-.container {
-  max-width: 650px;
-  width: 100%;
-  margin-bottom: 2.5em;
-  margin-top: 4em;
+  padding: 0 1.5rem;
 }
 
 .container h1 {
   font-size: 3.2rem;
   letter-spacing: 0.04em;
   font-weight: 400;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.5em;
 }
 
 .line {
   font-weight: 300;
-  line-height: 1.9;
+  line-height: 1.7;
   font-size: 1.1rem;
-  margin-bottom: 0.4em;
 }
 
-.button {
-  display: inline-block;
+.google-badge {
+  width: 160px;
   margin-top: 2.5em;
-  padding: 0.8em 1.8em;
-  border: 1px solid #c6a24a;
-  border-radius: 30px;
-  color: #d4b464;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  filter: brightness(0.8) sepia(1) saturate(0.6) hue-rotate(20deg);
+}
+.google-badge:hover {
+  opacity: 1;
+  transform: scale(1.02);
+  filter: brightness(1) sepia(1) saturate(0.8) hue-rotate(20deg);
+}
+
+footer {
+  position: absolute;
+  bottom: 1.2em;
+  font-size: 0.8rem;
+  opacity: 0.5;
   font-weight: 300;
 }
-.button:hover {
-  background-color: #111;
-  border-color: #d4b464;
-}
+footer a { color: #a48b44; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
 
 .why {
   position: absolute;
@@ -63,29 +62,11 @@ body {
   transition: opacity 3s ease, transform 3s ease;
   font-size: 0.9rem;
   font-weight: 300;
+  opacity: 0.8;
   line-height: 1.6;
   color: #bfa24c;
-  text-align: center;
-  padding: 0 1.5rem;
 }
 
-footer {
-  margin-top: auto;
-  padding-top: 2em;
-  font-size: 0.8rem;
-  opacity: 0.5;
-  font-weight: 300;
-}
-footer a {
-  color: #a48b44;
-  text-decoration: none;
-}
-footer a:hover { 
-  text-decoration: underline;
-  color: #d4b464;
-}
-
-/* --- Fade-in Sequence --- */
 .fade { opacity: 0; animation: fadein 2.5s forwards; }
 .delay0 { animation-delay: 0.2s; }
 .delay1 { animation-delay: 0.8s; }
