@@ -252,7 +252,7 @@
     <!-- Row 2: Current Implementation (Reverse Ripple, 180dp, 45% alpha) -->
     <h1 style="margin-top:48px; font-size:1.6em; opacity:0.85; font-weight:300;">Current Implementation (in app)</h1>
     <div class="container">
-        <!-- Screen 0: Pulsing Ring (same visuals, 150dp) -->
+        <!-- Screen 0: Pulsing Ring -->
         <div class="state">
             <div class="label">Screen 0</div>
             <div class="sublabel">Invitation (First Time Only)</div>
@@ -262,55 +262,123 @@
                             fill="none" stroke="#F5D58A" stroke-width="2"/>
                 </svg>
             </div>
-            <div class="sublabel">Pulses 35% → 55%</div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Size:</div>
+                    <div class="spec-value">180dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Stroke:</div>
+                    <div class="spec-value">2dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Animation:</div>
+                    <div class="spec-value">Pulsing</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">35% → 55%</div>
+                </div>
+            </div>
         </div>
         
-        <!-- Screen 1: Static Ring (180dp, 45% alpha) -->
+        <!-- Screen 1: Static Ring -->
         <div class="state">
             <div class="label">Screen 1</div>
-            <div class="sublabel">Static ring</div>
+            <div class="sublabel">Empty Return</div>
             <div class="circle-container" style="width:180px;height:180px;">
                 <svg viewBox="0 0 180 180" style="opacity:0.45;">
                     <circle cx="90" cy="90" r="89"
                             fill="none" stroke="#F5D58A" stroke-width="2"/>
                 </svg>
             </div>
-            <div class="sublabel">Same size as others</div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Size:</div>
+                    <div class="spec-value">180dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Stroke:</div>
+                    <div class="spec-value">2dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Animation:</div>
+                    <div class="spec-value">STATIC (frozen)</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">45% (fixed)</div>
+                </div>
+            </div>
         </div>
         
-        <!-- Screen 2: Outer ring + filled center (1dp ring) -->
+        <!-- Screen 2: Ring + filled center -->
         <div class="state">
             <div class="label">Screen 2</div>
-            <div class="sublabel">Ring + small center</div>
+            <div class="sublabel">Reverse Ripple (Start)</div>
             <div class="circle-container" style="width:180px;height:180px;">
                 <svg viewBox="0 0 180 180" style="opacity:0.45;">
-                    <!-- Outer ring (1dp look) -->
+                    <!-- Outer ring (1dp) -->
                     <circle cx="90" cy="90" r="89"
                             fill="none" stroke="#F5D58A" stroke-width="1.2"/>
-                    <!-- Center dot (~keep similar absolute size) -->
+                    <!-- Center dot -->
                     <circle cx="90" cy="90" r="26" fill="#F5D58A"/>
                 </svg>
             </div>
-            <div class="sublabel">Reverse ripple start</div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Size:</div>
+                    <div class="spec-value">180dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Outer:</div>
+                    <div class="spec-value">1dp stroke</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Center:</div>
+                    <div class="spec-value">~40dp filled</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">45% (all)</div>
+                </div>
+            </div>
         </div>
         
-        <!-- Screen 3: Two rings + filled center (1dp rings, 8dp spacing) -->
+        <!-- Screen 3: Two rings + filled center -->
         <div class="state">
             <div class="label">Screen 3</div>
-            <div class="sublabel">Two rings + filled center</div>
+            <div class="sublabel">Reverse Ripple (Complete)</div>
             <div class="circle-container" style="width:180px;height:180px;">
                 <svg viewBox="0 0 180 180" style="opacity:0.45;">
                     <!-- Outer ring -->
                     <circle cx="90" cy="90" r="89"
                             fill="none" stroke="#F5D58A" stroke-width="1.2"/>
-                    <!-- Middle ring (8dp inset approx) -->
+                    <!-- Middle ring (8dp inset) -->
                     <circle cx="90" cy="90" r="68" 
                             fill="none" stroke="#F5D58A" stroke-width="1.2"/>
                     <!-- Center fill -->
                     <circle cx="90" cy="90" r="26" fill="#F5D58A"/>
                 </svg>
             </div>
-            <div class="sublabel">Reverse ripple peak</div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Size:</div>
+                    <div class="spec-value">180dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Rings:</div>
+                    <div class="spec-value">2x 1dp, 8dp apart</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Center:</div>
+                    <div class="spec-value">~40dp filled</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">45% (all)</div>
+                </div>
+            </div>
         </div>
     </div>
 
