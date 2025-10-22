@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mini Zen - Visual States Preview (Updated)</title>
+    <title>ThreeZenPlus - Visual States Preview</title>
     <style>
         body {
-            background-color: #0D0D0D;
-            color: #F5D58A;
+            background-color: #FAFAF8;
+            color: #D3BC97;
             font-family: 'Segoe UI', system-ui, sans-serif;
             display: flex;
             flex-direction: column;
@@ -20,7 +20,7 @@
         }
         .subtitle {
             font-size: 0.9em;
-            opacity: 0.6;
+            opacity: 1.0;
             margin-bottom: 40px;
         }
         .container {
@@ -42,7 +42,7 @@
         }
         .sublabel {
             font-size: 0.85em;
-            opacity: 0.5;
+            opacity: 1.0;
             margin-top: -15px;
         }
         .circle-container {
@@ -60,7 +60,7 @@
         .specs {
             margin-top: 20px;
             padding: 20px;
-            background: #1a1a1a;
+            background: #F5F5F3;
             border-radius: 8px;
             min-width: 250px;
             font-size: 0.85em;
@@ -70,14 +70,14 @@
             gap: 15px;
             margin: 8px 0;
             padding: 5px 0;
-            border-bottom: 1px solid #2a2a2a;
+            border-bottom: 1px solid #E8E8E6;
         }
         .spec-label {
             font-weight: 600;
             min-width: 80px;
         }
         .spec-value {
-            opacity: 0.8;
+            opacity: 1.0;
         }
         
         /* Pulsing animation for screen 0 */
@@ -98,20 +98,20 @@
         .note {
             margin-top: 50px;
             padding: 25px;
-            background: #1a1a1a;
+            background: #F5F5F3;
             border-radius: 10px;
             max-width: 900px;
-            border-left: 3px solid #F5D58A;
+            border-left: 3px solid #D3BC97;
         }
         .note h3 {
             margin-top: 0;
-            color: #F5D58A;
+            color: #D3BC97;
         }
     </style>
 </head>
 <body>
-    <h1>Mini Zen Visual States</h1>
-    <div class="subtitle">Updated progression with correct visual hierarchy</div>
+    <h1>ThreeZenPlus Visual States</h1>
+    <div class="subtitle">White gold theme • 15-45 minute sessions • For established practitioners</div>
     
     <div class="container">
         <!-- Screen 0: Pulsing Ring -->
@@ -122,7 +122,7 @@
                 <svg class="pulse" width="150" height="150" viewBox="0 0 150 150">
                     <circle cx="75" cy="75" r="73" 
                             fill="none" 
-                            stroke="#F5D58A" 
+                            stroke="#D3BC97" 
                             stroke-width="2"/>
                 </svg>
             </div>
@@ -143,6 +143,10 @@
                     <div class="spec-label">Alpha:</div>
                     <div class="spec-value">35% → 55%</div>
                 </div>
+                <div class="spec-row">
+                    <div class="spec-label">Color:</div>
+                    <div class="spec-value">#D3BC97</div>
+                </div>
             </div>
         </div>
 
@@ -151,10 +155,10 @@
             <div class="label">Screen 1</div>
             <div class="sublabel">Empty Return (After Session 3)</div>
             <div class="circle-container">
-                <svg width="150" height="150" viewBox="0 0 150 150" style="opacity: 0.45">
+                <svg width="150" height="150" viewBox="0 0 150 150" style="opacity: 1.0">
                     <circle cx="75" cy="75" r="73" 
                             fill="none" 
-                            stroke="#F5D58A" 
+                            stroke="#D3BC97" 
                             stroke-width="2"/>
                 </svg>
             </div>
@@ -173,7 +177,11 @@
                 </div>
                 <div class="spec-row">
                     <div class="spec-label">Alpha:</div>
-                    <div class="spec-value">45% (fixed)</div>
+                    <div class="spec-value">100%</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Color:</div>
+                    <div class="spec-value">#D3BC97</div>
                 </div>
             </div>
         </div>
@@ -185,7 +193,7 @@
             <div class="circle-container">
                 <svg width="150" height="150" viewBox="0 0 150 150">
                     <circle cx="75" cy="75" r="75" 
-                            fill="#F5D58A" 
+                            fill="#D3BC97" 
                             stroke="none"/>
                 </svg>
             </div>
@@ -206,6 +214,10 @@
                     <div class="spec-label">Alpha:</div>
                     <div class="spec-value">100%</div>
                 </div>
+                <div class="spec-row">
+                    <div class="spec-label">Color:</div>
+                    <div class="spec-value">#D3BC97</div>
+                </div>
             </div>
         </div>
 
@@ -218,12 +230,12 @@
                     <!-- Outer halo ring (same brightness as inner) -->
                     <circle cx="85" cy="85" r="81" 
                             fill="none" 
-                            stroke="#F5D58A" 
+                            stroke="#D3BC97" 
                             stroke-width="8"
                             opacity="1.0"/>
                     <!-- Inner filled circle (same brightness as halo) -->
                     <circle cx="85" cy="85" r="60" 
-                            fill="#F5D58A" 
+                            fill="#D3BC97" 
                             stroke="none"
                             opacity="1.0"/>
                 </svg>
@@ -245,6 +257,10 @@
                     <div class="spec-label">Concept:</div>
                     <div class="spec-value">Compressed + expanded</div>
                 </div>
+                <div class="spec-row">
+                    <div class="spec-label">Color:</div>
+                    <div class="spec-value">#D3BC97</div>
+                </div>
             </div>
         </div>
     </div>
@@ -259,7 +275,7 @@
             <div class="circle-container" style="width:180px;height:180px;">
                 <svg class="pulse" viewBox="0 0 180 180">
                     <circle cx="90" cy="90" r="89"
-                            fill="none" stroke="#F5D58A" stroke-width="2"/>
+                            fill="none" stroke="#C4A574" stroke-width="2"/>
                 </svg>
             </div>
             <div class="specs">
@@ -279,6 +295,10 @@
                     <div class="spec-label">Alpha:</div>
                     <div class="spec-value">35% → 55%</div>
                 </div>
+                <div class="spec-row">
+                    <div class="spec-label">Color:</div>
+                    <div class="spec-value">#C4A574</div>
+                </div>
             </div>
         </div>
         
@@ -287,9 +307,9 @@
             <div class="label">Screen 1</div>
             <div class="sublabel">Empty Return</div>
             <div class="circle-container" style="width:180px;height:180px;">
-                <svg viewBox="0 0 180 180" style="opacity:0.75;">
+                <svg viewBox="0 0 180 180" style="opacity:1.0;">
                     <circle cx="90" cy="90" r="89"
-                            fill="none" stroke="#F5D58A" stroke-width="2"/>
+                            fill="none" stroke="#C4A574" stroke-width="2"/>
                 </svg>
             </div>
             <div class="specs">
@@ -307,7 +327,11 @@
                 </div>
                 <div class="spec-row">
                     <div class="spec-label">Alpha:</div>
-                    <div class="spec-value">75% (fixed)</div>
+                    <div class="spec-value">100%</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Color:</div>
+                    <div class="spec-value">#C4A574</div>
                 </div>
             </div>
         </div>
@@ -317,12 +341,12 @@
             <div class="label">Screen 2</div>
             <div class="sublabel">Reverse Ripple (Start)</div>
             <div class="circle-container" style="width:180px;height:180px;">
-                <svg viewBox="0 0 180 180" style="opacity:0.75;">
+                <svg viewBox="0 0 180 180" style="opacity:1.0;">
                     <!-- Outer ring (1dp) -->
                     <circle cx="90" cy="90" r="89"
-                            fill="none" stroke="#F5D58A" stroke-width="1.2"/>
+                            fill="none" stroke="#C4A574" stroke-width="1.2"/>
                     <!-- Center dot -->
-                    <circle cx="90" cy="90" r="26" fill="#F5D58A"/>
+                    <circle cx="90" cy="90" r="26" fill="#C4A574"/>
                 </svg>
             </div>
             <div class="specs">
@@ -340,7 +364,11 @@
                 </div>
                 <div class="spec-row">
                     <div class="spec-label">Alpha:</div>
-                    <div class="spec-value">75% (all)</div>
+                    <div class="spec-value">100%</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Color:</div>
+                    <div class="spec-value">#C4A574</div>
                 </div>
             </div>
         </div>
@@ -350,15 +378,15 @@
             <div class="label">Screen 3</div>
             <div class="sublabel">Reverse Ripple (Complete)</div>
             <div class="circle-container" style="width:180px;height:180px;">
-                <svg viewBox="0 0 180 180" style="opacity:0.75;">
+                <svg viewBox="0 0 180 180" style="opacity:1.0;">
                     <!-- Outer ring -->
                     <circle cx="90" cy="90" r="89"
-                            fill="none" stroke="#F5D58A" stroke-width="1.2"/>
+                            fill="none" stroke="#C4A574" stroke-width="1.2"/>
                     <!-- Middle ring (8dp inset) -->
                     <circle cx="90" cy="90" r="68" 
-                            fill="none" stroke="#F5D58A" stroke-width="1.2"/>
+                            fill="none" stroke="#C4A574" stroke-width="1.2"/>
                     <!-- Center fill -->
-                    <circle cx="90" cy="90" r="26" fill="#F5D58A"/>
+                    <circle cx="90" cy="90" r="26" fill="#C4A574"/>
                 </svg>
             </div>
             <div class="specs">
@@ -376,7 +404,11 @@
                 </div>
                 <div class="spec-row">
                     <div class="spec-label">Alpha:</div>
-                    <div class="spec-value">75% (all)</div>
+                    <div class="spec-value">100%</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Color:</div>
+                    <div class="spec-value">#C4A574</div>
                 </div>
             </div>
         </div>
@@ -389,20 +421,22 @@
         <br>
         <p><strong>Meaning:</strong></p>
         <ul style="margin: 10px 0; padding-left: 20px;">
-            <li><strong>Screen 0:</strong> Invitation - "Begin your practice" (first time only)</li>
-            <li><strong>Screen 1:</strong> Empty vessel - "Return to emptiness" (cycle restart)</li>
-            <li><strong>Screen 2:</strong> Substance - "Grounded presence" (after session 1)</li>
-            <li><strong>Screen 3:</strong> Expansion - "Spacious awareness" (after session 2)</li>
+            <li><strong>Screen 0:</strong> Invitation - "Begin deeper practice" (first time only)</li>
+            <li><strong>Screen 1:</strong> Empty vessel - "Return to vastness" (cycle restart)</li>
+            <li><strong>Screen 2:</strong> Substance - "Established presence" (after session 1)</li>
+            <li><strong>Screen 3:</strong> Expansion - "Boundless awareness" (after session 2)</li>
         </ul>
     </div>
 
     <div style="margin-top: 40px; opacity: 0.6; font-size: 0.9em;">
-        <p><strong>Key Changes from Previous:</strong></p>
+        <p><strong>ThreeZenPlus Specifics:</strong></p>
         <ul style="list-style: none; padding: 0;">
-            <li>✅ Screen 1 is now a static ring (was filled circle)</li>
-            <li>✅ Screen 3 has visible thick halo (was barely visible)</li>
-            <li>✅ Screen 3 inner circle is smaller but overall envelope is larger</li>
+            <li>✅ Session duration: 15-45 minutes (variance ±15-30%)</li>
+            <li>✅ First session: ~24 minutes</li>
+            <li>✅ Floor after decay: 15 minutes</li>
+            <li>✅ Color: White gold (#C4A574) for refined practice</li>
         </ul>
     </div>
 </body>
 </html>
+

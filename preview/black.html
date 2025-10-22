@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Zen - Visual States Preview (Updated)</title>
+    <style>
+        body {
+            background-color: #0D0D0D;
+            color: #F5D58A;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        .subtitle {
+            font-size: 0.9em;
+            opacity: 0.6;
+            margin-bottom: 40px;
+        }
+        .container {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .label {
+            font-size: 1.1em;
+            font-weight: 400;
+        }
+        .sublabel {
+            font-size: 0.85em;
+            opacity: 0.5;
+            margin-top: -15px;
+        }
+        .circle-container {
+            width: 180px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        .specs {
+            margin-top: 20px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 8px;
+            min-width: 250px;
+            font-size: 0.85em;
+        }
+        .spec-row {
+            display: flex;
+            gap: 15px;
+            margin: 8px 0;
+            padding: 5px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .spec-label {
+            font-weight: 600;
+            min-width: 80px;
+        }
+        .spec-value {
+            opacity: 0.8;
+        }
+        
+        /* Pulsing animation for screen 0 */
+        @keyframes pulse {
+            0%, 100% { 
+                opacity: 0.35;
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.55;
+                transform: scale(1.25);
+            }
+        }
+        .pulse {
+            animation: pulse 5s ease-in-out infinite;
+        }
+        
+        .note {
+            margin-top: 50px;
+            padding: 25px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            max-width: 900px;
+            border-left: 3px solid #F5D58A;
+        }
+        .note h3 {
+            margin-top: 0;
+            color: #F5D58A;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mini Zen Visual States</h1>
+    <div class="subtitle">Updated progression with correct visual hierarchy</div>
+    
+    <div class="container">
+        <!-- Screen 0: Pulsing Ring -->
+        <div class="state">
+            <div class="label">Screen 0</div>
+            <div class="sublabel">Invitation (First Time Only)</div>
+            <div class="circle-container">
+                <svg class="pulse" width="150" height="150" viewBox="0 0 150 150">
+                    <circle cx="75" cy="75" r="73" 
+                            fill="none" 
+                            stroke="#F5D58A" 
+                            stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Size:</div>
+                    <div class="spec-value">150dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Stroke:</div>
+                    <div class="spec-value">2dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Animation:</div>
+                    <div class="spec-value">Pulsing</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">35% → 55%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 1: Static Ring -->
+        <div class="state">
+            <div class="label">Screen 1</div>
+            <div class="sublabel">Empty Return (After Session 3)</div>
+            <div class="circle-container">
+                <svg width="150" height="150" viewBox="0 0 150 150" style="opacity: 0.45">
+                    <circle cx="75" cy="75" r="73" 
+                            fill="none" 
+                            stroke="#F5D58A" 
+                            stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Size:</div>
+                    <div class="spec-value">150dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Stroke:</div>
+                    <div class="spec-value">2dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Animation:</div>
+                    <div class="spec-value">STATIC (frozen)</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">45% (fixed)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 2: Filled Circle -->
+        <div class="state">
+            <div class="label">Screen 2</div>
+            <div class="sublabel">Substance (After Session 1)</div>
+            <div class="circle-container">
+                <svg width="150" height="150" viewBox="0 0 150 150">
+                    <circle cx="75" cy="75" r="75" 
+                            fill="#F5D58A" 
+                            stroke="none"/>
+                </svg>
+            </div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Size:</div>
+                    <div class="spec-value">150dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Fill:</div>
+                    <div class="spec-value">Solid</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Animation:</div>
+                    <div class="spec-value">Static</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">100%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 3: Smaller Circle + Thick Halo -->
+        <div class="state">
+            <div class="label">Screen 3</div>
+            <div class="sublabel">Expansion (After Session 2)</div>
+            <div class="circle-container">
+                <svg width="170" height="170" viewBox="0 0 170 170">
+                    <!-- Outer halo ring (same brightness as inner) -->
+                    <circle cx="85" cy="85" r="81" 
+                            fill="none" 
+                            stroke="#F5D58A" 
+                            stroke-width="8"
+                            opacity="1.0"/>
+                    <!-- Inner filled circle (same brightness as halo) -->
+                    <circle cx="85" cy="85" r="60" 
+                            fill="#F5D58A" 
+                            stroke="none"
+                            opacity="1.0"/>
+                </svg>
+            </div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Inner:</div>
+                    <div class="spec-value">120dp, 100% alpha</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Halo:</div>
+                    <div class="spec-value">8dp thick, 100% alpha</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Overall:</div>
+                    <div class="spec-value">~170dp (larger)</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Concept:</div>
+                    <div class="spec-value">Compressed + expanded</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 2: Current Implementation (Reverse Ripple, 180dp, 45% alpha) -->
+    <h1 style="margin-top:48px; font-size:1.6em; opacity:0.85; font-weight:300;">Current Implementation (in app)</h1>
+    <div class="container">
+        <!-- Screen 0: Pulsing Ring -->
+        <div class="state">
+            <div class="label">Screen 0</div>
+            <div class="sublabel">Invitation (First Time Only)</div>
+            <div class="circle-container" style="width:180px;height:180px;">
+                <svg class="pulse" viewBox="0 0 180 180">
+                    <circle cx="90" cy="90" r="89"
+                            fill="none" stroke="#F5D58A" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Size:</div>
+                    <div class="spec-value">180dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Stroke:</div>
+                    <div class="spec-value">2dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Animation:</div>
+                    <div class="spec-value">Pulsing</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">35% → 55%</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Screen 1: Static Ring -->
+        <div class="state">
+            <div class="label">Screen 1</div>
+            <div class="sublabel">Empty Return</div>
+            <div class="circle-container" style="width:180px;height:180px;">
+                <svg viewBox="0 0 180 180" style="opacity:0.75;">
+                    <circle cx="90" cy="90" r="89"
+                            fill="none" stroke="#F5D58A" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Size:</div>
+                    <div class="spec-value">180dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Stroke:</div>
+                    <div class="spec-value">2dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Animation:</div>
+                    <div class="spec-value">STATIC (frozen)</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">75% (fixed)</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Screen 2: Ring + filled center -->
+        <div class="state">
+            <div class="label">Screen 2</div>
+            <div class="sublabel">Reverse Ripple (Start)</div>
+            <div class="circle-container" style="width:180px;height:180px;">
+                <svg viewBox="0 0 180 180" style="opacity:0.75;">
+                    <!-- Outer ring (1dp) -->
+                    <circle cx="90" cy="90" r="89"
+                            fill="none" stroke="#F5D58A" stroke-width="1.2"/>
+                    <!-- Center dot -->
+                    <circle cx="90" cy="90" r="26" fill="#F5D58A"/>
+                </svg>
+            </div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Size:</div>
+                    <div class="spec-value">180dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Outer:</div>
+                    <div class="spec-value">1dp stroke</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Center:</div>
+                    <div class="spec-value">~40dp filled</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">75% (all)</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Screen 3: Two rings + filled center -->
+        <div class="state">
+            <div class="label">Screen 3</div>
+            <div class="sublabel">Reverse Ripple (Complete)</div>
+            <div class="circle-container" style="width:180px;height:180px;">
+                <svg viewBox="0 0 180 180" style="opacity:0.75;">
+                    <!-- Outer ring -->
+                    <circle cx="90" cy="90" r="89"
+                            fill="none" stroke="#F5D58A" stroke-width="1.2"/>
+                    <!-- Middle ring (8dp inset) -->
+                    <circle cx="90" cy="90" r="68" 
+                            fill="none" stroke="#F5D58A" stroke-width="1.2"/>
+                    <!-- Center fill -->
+                    <circle cx="90" cy="90" r="26" fill="#F5D58A"/>
+                </svg>
+            </div>
+            <div class="specs">
+                <div class="spec-row">
+                    <div class="spec-label">Size:</div>
+                    <div class="spec-value">180dp</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Rings:</div>
+                    <div class="spec-value">2x 1dp, 8dp apart</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Center:</div>
+                    <div class="spec-value">~40dp filled</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Alpha:</div>
+                    <div class="spec-value">75% (all)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="note">
+        <h3>🎯 Visual Progression Logic</h3>
+        <p><strong>First Launch:</strong> Screen 0 (pulse) → Session 1 → Screen 2 (filled) → Session 2 → Screen 3 (halo) → Session 3 → Screen 1 (static ring)</p>
+        <p><strong>Forever Loop:</strong> Screen 1 (empty) → Screen 2 (solid) → Screen 3 (expanded) → Screen 1 (return)</p>
+        <br>
+        <p><strong>Meaning:</strong></p>
+        <ul style="margin: 10px 0; padding-left: 20px;">
+            <li><strong>Screen 0:</strong> Invitation - "Begin your practice" (first time only)</li>
+            <li><strong>Screen 1:</strong> Empty vessel - "Return to emptiness" (cycle restart)</li>
+            <li><strong>Screen 2:</strong> Substance - "Grounded presence" (after session 1)</li>
+            <li><strong>Screen 3:</strong> Expansion - "Spacious awareness" (after session 2)</li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 40px; opacity: 0.6; font-size: 0.9em;">
+        <p><strong>Key Changes from Previous:</strong></p>
+        <ul style="list-style: none; padding: 0;">
+            <li>✅ Screen 1 is now a static ring (was filled circle)</li>
+            <li>✅ Screen 3 has visible thick halo (was barely visible)</li>
+            <li>✅ Screen 3 inner circle is smaller but overall envelope is larger</li>
+        </ul>
+    </div>
+</body>
+</html>
+
